@@ -1,0 +1,477 @@
+.room {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: 	lightblue;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  .topBackground {
+    position: absolute;
+    left: 0;
+    width: 5%;
+    height: 100%;
+    background: url("https://static.vecteezy.com/system/resources/previews/020/204/385/original/colorful-seamless-pattern-fun-colorful-line-doodle-shape-background-yellow-green-violet-pink-red-blue-colors-mosaic-vector.jpg") center/cover no-repeat fixed;
+    z-index: 2;
+  }
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+  width: 100%; 
+  height: 100%;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  padding-left: 100px;
+  @media only screen and (max-width: 768px) {
+   flex-direction: column; 
+   padding:0 5px;
+  }
+  background: whitesmoke;
+  .leftContainer {
+    position: relative;
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    @media only screen and (max-width: 768px) {
+      flex: 0.2;
+     }
+    .roomInfoContainer {
+      flex:2;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding:50px 20px 5px 20px ;
+      @media only screen and (max-width: 768px) {
+        padding:30px 10px 5px 10px ;
+       }
+      background-color: transparent;
+      .titleContainer {
+        flex:2;
+        
+      }
+      .infoContainer {
+        width: 100%;
+        padding: 0 60px;
+        flex:1;
+        font-size: .8em;
+        font-weight: bold;
+        color: var(--green);
+        @media only screen and (max-width: 768px) {
+          font-size: 12px;
+         }
+        p{
+          margin:0;
+        }
+      }
+    }
+    .usersContainer {
+      flex:5;
+      position: relative;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: top;
+      align-items: center;
+      padding: 40px 0;
+      @media only screen and (max-width: 768px) {
+        padding: 5px 0 0 0;
+        flex-direction: row;
+        justify-content: space-around;
+       }
+        .customToast {
+          border:#e6e6fa 4px outset;
+          width: 70%;
+          padding: 0.25rem;
+          border-radius: 10px;
+          margin-bottom: 10px;
+          @media only screen and (max-width: 768px) {
+            width: 100%;
+            display:flex;
+            border:#e6e6fa 2px outset;
+            background-color: white;
+            margin-bottom: 0;
+            margin-right: 2px;
+            align-items: center;
+            justify-content: space-around;
+           }
+        }
+        .customToastHeader {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.55rem 0.95rem 0.55rem 0.55rem;
+          border-radius: 5px;
+          background-color: white;
+          color:#0f0f0f;
+          font-weight: bold;
+          font-size: 17px;
+          align-items: center;
+          @media only screen and (max-width: 768px) {
+            width: 100%;
+            font-size: 12px;
+            padding: 0;
+            background-color: white;
+            
+           }
+          .nameContainer {
+            border-radius: 25px;
+            width: 35%;
+            display: flex;
+            justify-content: center;
+          }
+        }
+        .footerButton {
+          position: absolute;
+          left: 50;
+          bottom: 0;
+          width: 70%;
+          height: 20%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @media only screen and (max-width: 768px) {
+            position: relative;
+            width: 15%;
+            height: 15px;
+           }
+          button {
+            color: grey; /* Text color (white) */
+            background-color: lightblue;
+            font-weight: bold;
+            padding: 10px 10px; /* Adjust padding for the button size */
+            font-size: 32px; /* Adjust font size */
+            border: grey 4px outset; /* Remove border */
+            border-radius: 10px; /* Add rounded corners */
+            width: 100%;
+            @media only screen and (max-width: 768px) {
+              font-size: 16px;
+              padding: 1px;
+              border: grey 2px outset; /* Remove border */
+             }
+            cursor: pointer; /* Add cursor pointer on hover */
+            transition: background-color 0.3s ease; /* Add transition effect */
+            
+          }
+          button:hover {
+            background-color: #0f4c75;
+            border: #0f4c75 4px outset; /* Remove border */
+            color:#bbe1fa
+          }     
+        }
+    }
+  }
+  .centerContainer {
+    flex:2;
+    display:flex;
+    flex-direction: column; 
+    @media only screen and (max-width: 768px) {
+      flex:3;
+     }  
+    .gameInfoContainer {
+      flex:1;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      @media only screen and (max-width: 768px) {
+        flex:2;
+        padding: 5px;
+       }
+      .wordContainer {
+        display: flex; 
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        @media only screen and (max-width: 768px) {
+          max-height: 40px;
+         }
+        .characterContainer {
+          margin-right: 15px; 
+          display:flex;
+          height: 60%;
+          width: 35px;
+          flex-direction: column;
+          @media only screen and (max-width: 768px) {
+            width: 10px;
+            height: 40%;
+            margin-right: 5px; 
+           }
+        }
+        .character {
+          text-align: center;
+          font-weight: bold;
+          font-size: 35px;
+          @media only screen and (max-width: 768px) {
+            font-size: 10px;
+           }
+          height: 93%;
+          width: 100%;
+        }
+        .lowBar {
+          height: 7%;
+          width: 100%;
+          background-color: #0f0f0f;
+        }
+      }   
+      .randomWordsContainer {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       align-items: center;
+        .wordButton {
+          color: grey; /* Text color (white) */
+          background-color: white;
+          display: flex;
+          font-size: 18px; /* Adjust font size */
+          border: #e6e6fa  2px outset; /* Remove border */
+          border-radius: 15px; /* Add rounded corners */
+          margin-right: 15px;
+          font-weight: bold;
+          padding: 8px 20px;
+          cursor: pointer; /* Add cursor pointer on hover */
+          transition: background-color 0.3s ease; /* Add transition effect */
+          @media only screen and (max-width: 768px) {
+            font-size: 12px;
+            margin-right: 5px;
+            border: #e6e6fa  2px outset; 
+            padding: 5px 20px;
+           }
+          
+        }
+        .wordButton:hover {
+          background-color: #0f4c75;
+          border: #0f4c75 2px solid; /* Remove border */
+          color:#bbe1fa
+        }     
+      }
+      .timer{
+        display: flex;
+        justify-content: center; /* Center the character containers */
+        width: 40%;
+        height: 50%;
+        align-items: center;
+        background-color: transparent;
+        margin-bottom:5px ;
+        .time {
+          border: var(--green)  2px outset; 
+          padding: 5px 100px;
+          font-size: 30px;
+          border-radius: 4px;
+          @media only screen and (max-width: 768px) {
+            font-size: 13px;
+            padding: 0px 50px;
+           }
+          color: var(--green);
+        }
+      }
+      
+    }
+    .no-scroll {
+      overflow: hidden;
+    }
+    .boardContainer {
+      flex:4;
+      background-color: 	transparent;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border:#e6e6fa 4px solid;
+      .stage{ 
+        position: relative;
+      }
+    }
+    .toolsContainer {
+      background-color: transparent;
+      flex:1;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 20px;
+      @media only screen and (max-width: 768px) {
+        padding: 5px;
+        flex-direction: column;
+        flex:1.5;
+       }
+      .brushesContainer{
+        flex:2;
+        display:flex;
+        justify-content: center;
+        margin-right: 20px;
+        @media only screen and (max-width: 768px) {
+          margin-bottom: 5px;
+          justify-content: space-around;
+          width: 80%;
+          margin-right: 0;
+         }
+         .toolContainer {  
+          display: flex;
+          flex:1;
+          margin-right: 10px;
+          justify-content: center;
+          align-items: center;
+          .toolButton {  
+            border-radius: 5px;
+            border:grey 2px solid;
+            @media only screen and (max-width: 768px) {   
+              border:grey 2px solid;
+              margin-right: 0;
+              font-size: 14px;
+            }
+            background-color: lightgrey;
+          }
+          .trashButton{
+            border:grey 2px outset;
+            border-radius: 5px;
+            @media only screen and (max-width: 768px) {   
+              border:grey 2px outset;
+              margin: 0;
+              font-size: 14px;
+            }
+           }
+           @media only screen and (min-width: 1500px) {   
+            .trashButton:hover{
+              border:black 2px solid;
+              background-color: red;
+              color:white;
+             }
+            }
+        }    
+      }
+      .colorsContainer {
+        flex:3;
+        background-color: #e6e6fa;
+        border-radius: 7px;
+        display: flex;
+        border:#e6e6fa 2px outset;
+        justify-content: center;
+        height: 35%;
+        padding: 0 5px;
+        @media only screen and (max-width: 768px) {   
+          border:#e6e6fa 2px outset;
+          flex:2;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        .colorButtonContainer {
+          flex:1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .colorButton {
+            margin: 3px 0;
+            border-radius: 5px;
+            min-height: 20px;
+            height: 60%;
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+  .rightContainer {
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: transparent;
+    .chatContainer {
+      flex:10;
+      background-color: transparent;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      @media only screen and (max-width: 768px) {   
+        flex:3;
+     }
+      .content {
+        max-width: 400px; /* Set a maximum width for the content */
+        max-height: 800px; 
+        background-color: transparent;
+        width: 90%;
+        height: 90%;
+        padding: 15px 5px;
+        font-size: 18px;
+        border: none;
+        border-radius: 4px;
+        overflow-y: auto;
+        cursor: default;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        display: flex;
+        @media only screen and (max-width: 768px) {   
+           font-size: 11px;
+           padding: 5px;
+           max-width: 400px; /* Set a maximum width for the content */
+           max-height: 120px; 
+        }
+        flex-direction: column-reverse; 
+        .content:focus {
+          outline: none; 
+        }
+        
+        .message {
+          margin-top: 2px;
+          border-radius: 3px;
+          padding: 5px;
+          color: black;
+          @media only screen and (max-width: 768px) {   
+            padding: 2px;
+         }
+        }
+        
+        &::-webkit-scrollbar {
+          width: 5px;
+        }
+      
+        &::-webkit-scrollbar-thumb {
+          background-color: hotpink; /* Adjust the color as needed */
+          border-radius: 4px;
+        }
+      
+        &::-webkit-scrollbar-track {
+          background-color: lightpink;
+          border-radius: 4px;
+        }
+      } 
+     }
+    .chatInput {
+      flex:1;
+      background-color: transparent;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      min-height: 40px;
+      input {
+        background-color: white;
+        border:#e6e6fa 4px solid;
+        width: 90%;
+        height: 90%;
+        padding: 0 .5em;
+        border-radius: 2px;
+        position: relative;
+        font-size: 1em;
+        appearance: none;
+        @media only screen and (max-width: 768px) {   
+          font-size: 12px;
+          height: 80%;
+          border:#e6e6fa 2px solid;
+        }
+      }
+    }
+  }
+};
+
+.disabled {
+  opacity: 0.5; /* You can adjust the styling to visually indicate the disabled state */
+  cursor: not-allowed; /* Change cursor to indicate not clickable */
+  /* Add any other styling you want for the disabled state */
+}
+
